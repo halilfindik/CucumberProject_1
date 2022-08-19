@@ -25,11 +25,6 @@ public class Parent {
         element.click();
     }
     public void waitUntilVisible(WebElement element) {
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
         WebDriverWait wait=new WebDriverWait(Gwd.getDriver(), dr);
         wait.until(ExpectedConditions.visibilityOf(element));
     }
